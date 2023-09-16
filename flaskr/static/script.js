@@ -30,8 +30,6 @@ $(document).ready(function () {
             hours = (timeElapsed / 3600000) + prevHours;
             minutes = ((timeElapsed / 60000) + prevMinutes) % 60;
             seconds = ((timeElapsed / 1000) + prevSeconds) % 60;
-
-            console.log(hours)
             
 
             setStopwatch(hours, minutes, seconds);
@@ -41,7 +39,6 @@ $(document).ready(function () {
     function run() {
         running = true;
         runTimer()
-        $("#trackstart").hide()
     }
 
     function pause() {
@@ -68,7 +65,16 @@ $(document).ready(function () {
     $("#trackreset").on('click', function () {
         running = false;
         pause();
-        clearTimeout(timer);
+        hours = minutes = seconds = 0;
+        setStopwatch(hours,minutes,seconds);
     })
 
+    $("#timesubmit").on('click', function () {
+        subhours = $("#hr").text();
+        subminutes = $("#min").text();
+        subseconds = $("#sec").text();
+        console.log(subhours)
+        console.log(subminutes)
+        console.log(subseconds)
+    })
 })
