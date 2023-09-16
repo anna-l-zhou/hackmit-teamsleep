@@ -72,9 +72,5 @@ $(document).ready(function () {
     $("#timesubmit").on('click', function () {
         subhours = $("#hr").text();
         subminutes = $("#min").text();
-        subseconds = $("#sec").text();
-        console.log(subhours)
-        console.log(subminutes)
-        console.log(subseconds)
     })
 })
