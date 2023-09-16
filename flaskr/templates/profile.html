@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Profile
+{% endblock %}
+
+{% block header %}
+  <h1>{{g.user['username']}}</h1>
+{% endblock %}
+
+{% block content %}
+  <section class="geninfo">
+    <div class="userstreak">Your current streak is:</div>
+</section>
+<section class="streakentry">
+    <button class="tracker" id="trackstart">Start Tracking</button>
+    <div id="stopwatch">
+        <span class="digit" id="hr">
+            00
+        </span>
+        <span class="txt">Hr</span>
+        <span class="digit" id="min">
+            00
+        </span>
+        <span class="txt">Min</span>
+        <span class="digit" id="sec">
+            00
+        </span>
+        <span class="txt">Sec</span>
+    </div>
+</section>
+{% endblock %}
