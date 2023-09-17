@@ -3,9 +3,19 @@ body {
 }
 
 nav {
-    background-color: #7DA7C5;
+    background: linear-gradient(to bottom, #000e44, #1a2b52);
+
 }
 
 .sitetitle {
     font-family: 'Baloo Thambi 2', sans-serif;
 }
+
+nav{
+    background-color: #000e44;
+}
+
+nav a, h1{
+    color: white;
+}
+
