@@ -23,17 +23,26 @@ def profile():
 @bp.route('/submit', methods=['POST'])
 @login_required
 def submit():
-    stime = request.form['stime']
-    print(stime)
+    try:
+        stime = request.form['stime']
+        print(stime)
 
-    print('hi')
-        
-    db = get_db()
-    db.execute(
-        'INSERT INTO history (stime, author_id)'
-        ' VALUES (?, ?)',
-        (stime, g.user['id'])
-    )
-    db.commit()
+        print('hi')
+            
+        db = get_db()
+        db.execute(
+            'INSERT INTO history (stime, author_id)'
+            ' VALUES (?, ?)',
+            (stime, g.user['id'])
+        )
+        db.commit()
 
-    return redirect(url_for('routes.profile'))
+        return redirect(url_for('routes.profile'))
+    
+    except Exception as e:
+        return(e)
+    
+@bp.route('/leaderboard')
+@login_required
+def leaderboard():
+    return render_template('leaderboard.html')
