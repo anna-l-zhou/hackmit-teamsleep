@@ -1,5 +1,7 @@
 # hackMIT: nap stars!
-Insomniacs, oversleepers, and tired people alike! Welcome, let us all become nap STARS! 
+Insomniacs, oversleepers, and tired people alike! Welcome, let us all become nap STARS!
+
+Created by: @anna-l-zhou, @dalethmoya, @masongu2019, @TheA-Way
 
 ## Inspiration
 Contrary to popular belief, it is _not_ healthy to brag about how little sleep you are getting. We decided to change that by turning sleep into a healthy competition. Getting better sleep is something we all want to do, but it can be difficult when actually trying to go through with it. Inspired by apps like Snapchat and Duolingo that implement competitive streak systems for consistent use, we thought that adding an element of competition with both yourself and other people would be a great way to motivate people to sleep more consistently.
