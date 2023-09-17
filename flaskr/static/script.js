@@ -5,6 +5,7 @@ $(document).ready(function () {
     var secondsElement = $('#sec')
 
     var hours = minutes = seconds = timer = 0;
+    $("#time").val(0.0);
 
     function prependZero(time) {
         time = '' + (time | 0);
@@ -16,6 +17,8 @@ $(document).ready(function () {
         hoursElement.text(prependZero(hours));
         minutesElement.text(prependZero(minutes));
         secondsElement.text(prependZero(seconds));
+
+        $("#time").val(parseFloat((hoursElement.text()) + (parseInt(minutesElement.text()) / 60)).toFixed(1));
     }
 
     function runTimer() {
@@ -63,14 +66,10 @@ $(document).ready(function () {
     })
 
     $("#trackreset").on('click', function () {
-        running = false;
-        pause();
-        hours = minutes = seconds = 0;
-        setStopwatch(hours,minutes,seconds);
+        reset()
     })
 
     $("#timesubmit").on('click', function () {
-        subhours = $("#hr").text();
-        subminutes = $("#min").text();
+        console.log($('#time').val())
     })
 })
