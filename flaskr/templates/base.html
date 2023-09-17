@@ -23,6 +23,10 @@
 </head>
 <nav>
   <h1>Nap Stars</h1>
+  <video width="160" height="90" autoplay loop muted playsinline>
+    <source src="{{ url_for('static', filename='nap-stars-logo.mp4') }}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
   <ul>
     {% if g.user %}
     <li><span>{{ g.user['username'] }}</span>
@@ -30,6 +34,7 @@
       {% else %}
     <li><a href="{{ url_for('auth.register') }}">Register</a>
     <li><a href="{{ url_for('auth.login') }}">Log In</a>
+    <li><a href="{{ url_for('routes.profile') }}">View profile</a>
       {% endif %}
   </ul>
 </nav>
