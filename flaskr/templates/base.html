@@ -25,6 +25,7 @@
   <ul class="navlist">
     {% if g.user %}
     <li><span>Welcome, {{ g.user['username'] }}!</span>
+    <li><a href="{{ url_for('routes.leaderboard') }}">Leaderboard</a>
     <li><a href="{{ url_for('routes.profile') }}">View profile</a>
     <li><a href="{{ url_for('auth.logout') }}">Log out</a>
       {% else %}
