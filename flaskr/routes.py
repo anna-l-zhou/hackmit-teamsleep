@@ -37,3 +37,21 @@ def submit():
     db.commit()
 
     return redirect(url_for('routes.profile'))
+
+@bp.route('/submit', methods=['POST'])
+@login_required
+def submit():
+    stime = request.form['stime']
+    print(stime)
+
+    print('hi')
+        
+    db = get_db()
+    db.execute(
+        'INSERT INTO history (stime, author_id)'
+        ' VALUES (?, ?)',
+        (stime, g.user['id'])
+    )
+    db.commit()
+
+    return redirect(url_for('routes.leaderboard'))
