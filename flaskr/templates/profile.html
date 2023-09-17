@@ -28,10 +28,17 @@ Profile
     <button class="tracker btn btn-dark" id="trackstart">Start Tracking</button>
     <button class="tracker btn btn-dark" id="trackpause">Pause Tracking</button>
     <button class="tracker btn btn-dark" id="trackreset">Reset Tracking</button>
-    <form method="post">
-        <input name="time" id="time" value="{{ request.form['stime'] }}">
+    
+    <form method="post" action="/submit">
+        <input name="stime" id="stime">
         <input type="submit" id="timesubmit" value="Submit Time" class="btn btn-primary">
     </form>
+</section>
+
+<section class="streak">
+    Your current streak:
+
+    {{g.user['streak']}}
 </section>
 
 {% for history in history %}

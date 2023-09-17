@@ -36,8 +36,8 @@ nav a, h1{
     color: white;
 }
 
-#time {
-    /* display:none; */
+#stime {
+    display:none;
 }
 
 .navlist {
@@ -118,4 +118,12 @@ nav a, h1{
     max-width:30rem;
     margin:auto;
     display:block;
+}
+
+.history {
+    background-color:aliceblue;
+    font-weight:500;
+    padding:1rem;
+    border-radius:1rem;
+    margin:1rem;
 }

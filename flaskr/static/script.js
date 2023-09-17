@@ -18,7 +18,7 @@ $(document).ready(function () {
         minutesElement.text(prependZero(minutes));
         secondsElement.text(prependZero(seconds));
 
-        $("#time").val(parseFloat((hoursElement.text()) + (parseInt(minutesElement.text()) / 60)).toFixed(1));
+        $("#stime").val(parseFloat((hoursElement.text()) + (parseInt(minutesElement.text()) / 60)).toFixed(1));
     }
 
     function runTimer() {
