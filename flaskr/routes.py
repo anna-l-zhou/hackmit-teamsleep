@@ -13,7 +13,7 @@ bp = Blueprint('routes', __name__)
 def profile():
     db = get_db()
     history = db.execute(
-        'SELECT h.id, stime, author_id, username'
+        'SELECT h.id, stime, author_id, username, created '
         ' FROM history h JOIN user u ON h.author_id = u.id'
         ' ORDER BY created DESC'
     ).fetchall()
@@ -25,9 +25,6 @@ def profile():
 def submit():
     try:
         stime = request.form['stime']
-        print(stime)
-
-        print('hi')
             
         db = get_db()
         db.execute(
@@ -37,7 +34,7 @@ def submit():
         )
         db.commit()
 
-        return redirect(url_for('routes.profile'))
+        return redirect(url_for('routes.profile'), streak = streak)
     
     except Exception as e:
         return(e)
