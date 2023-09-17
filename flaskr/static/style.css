@@ -7,8 +7,19 @@ nav {
 
 }
 
-.sitetitle {
+.logo {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    height: 10vh;           /* This assumes you want to center the video in the viewport. Adjust as needed. */
+}
+
+
+.title {
+    margin-right: 20px; /* spacing between video and text */
     font-family: 'Baloo Thambi 2', sans-serif;
+    color: white;
+
 }
 
 nav{
