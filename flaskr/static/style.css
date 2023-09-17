@@ -191,3 +191,26 @@ nav a, h1{
     color: #3498db;
     margin-right: 15px;
 }
+
+.streakdisplay {
+    background-color:#1a2b52;
+    font-family:'Baloo Thambi 2', sans-serif;
+    border-radius:6rem;
+    color:white;
+    width:6rem;
+    height:6rem;
+    text-align:center;
+    font-size:3rem;
+    padding-top:.75rem;
+    margin:auto;
+    margin-top: 1rem;
+    box-shadow: 5px 5px #3498db;
+}
+
+.streak {
+    margin:auto;
+    display:block;
+    width:100%;
+    text-align:center;
+    font-family:'Baloo Thambi 2', sans-serif;
+}
