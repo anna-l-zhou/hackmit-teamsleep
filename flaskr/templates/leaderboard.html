@@ -7,4 +7,39 @@ Leaderboard
 {% endblock %}
 
 {% block content %}
+<section class="leaderboard-page">
+    <div class="leaderboard">
+        <div class="leaderboard-item">
+            <span class="position">1</span>
+            <img src="{{ url_for('static', filename='pp1.jpg') }}" type="jpg" alt="User 1" class="profile-image">
+            <span class="user-name">Jane Doe</span>
+            <video class="streak-logo" alt="Streak ZZZ Logo" autoplay loop muted playsinline>
+                <source src="{{ url_for('static', filename='streak-animation2.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <span class="score">10 hrs</span>
+        </div>
+        <div class="leaderboard-item">
+            <span class="position">2</span>
+            <img src="{{ url_for('static', filename='pp2.jpg') }}" type="jpg" alt="User 2" class="profile-image">
+            <span class="user-name">Lane Loe</span>
+            <video class="streak-logo" alt="Streak ZZZ Logo" autoplay loop muted playsinline>
+                <source src="{{ url_for('static', filename='streak-animation1.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <span class="score">9.25 hrs</span>
+        </div>
+        <div class="leaderboard-item">
+            <span class="position">3</span>
+            <img src="{{ url_for('static', filename='pp3.jpg') }}" type="jpg" alt="User 3" class="profile-image">
+            <span class="user-name">Bane Boe</span>
+            <video class="streak-logo" alt="Streak ZZZ Logo" autoplay loop muted playsinline>
+                <source src="{{ url_for('static', filename='streak-animation2.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <span class="score">8.5 hrs</span>
+        </div>
+        
+    </div>
+</section>
 {% endblock %}

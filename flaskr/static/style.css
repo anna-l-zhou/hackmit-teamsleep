@@ -119,3 +119,67 @@ nav a, h1{
     margin:auto;
     display:block;
 }
+
+.leaderboard-page body {
+    font-family:'Baloo Thambi 2', sans-serif;
+    padding: 20px;
+}
+
+.leaderboard-page header {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.leaderboard {
+    margin-top: 20px;
+}
+
+.leaderboard-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0;
+
+    border-radius: 50px / 25px; 
+    background: linear-gradient(145deg, #f5f5f5, #e0e0e0); 
+    box-shadow:  5px 5px 10px #d1d1d1, 
+                -5px -5px 10px #ffffff;  
+    margin-bottom: 25px;
+}
+
+.position {
+    font-size: 24px;
+    width: 30px;
+    text-align: center;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.streak-logo {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.user-name {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.score {
+    font-size: 20px;
+    color: #3498db;
+    margin-right: 15px;
+}
