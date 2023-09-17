@@ -14,6 +14,7 @@ def register():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
+        streak = 0
         db = get_db()
         error = None
 
@@ -25,8 +26,8 @@ def register():
         if error is None:
             try:
                 db.execute(
-                    "INSERT INTO user (username, password) VALUES (?, ?)",
-                    (username, generate_password_hash(password)),
+                    "INSERT INTO user (username, password, streak) VALUES (?, ?, ?)",
+                    (username, generate_password_hash(password), streak),
                 )
                 db.commit()
             except db.IntegrityError:

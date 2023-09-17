@@ -1,4 +1,5 @@
 # hackmit-teamsleep
+Insomniacs, oversleepers, and tired people alike! Wlecome, let us all become nap STARS! 
 
 ## Inspiration
 Contrary to popular belief, it is _not_ healthy to brag about how little sleep you are getting. We decided to change that my turning sleep, into a healthy competition. 
