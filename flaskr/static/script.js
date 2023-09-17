@@ -5,6 +5,7 @@ $(document).ready(function () {
     var secondsElement = $('#sec')
 
     var hours = minutes = seconds = timer = 0;
+    $("#time").val(0.0);
 
     function prependZero(time) {
         time = '' + (time | 0);

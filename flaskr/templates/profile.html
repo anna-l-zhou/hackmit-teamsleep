@@ -5,17 +5,12 @@ Profile
 {% endblock %}
 
 {% block header %}
-  <h1>{{g.user['username']}}</h1>
+<h1 class="pagename">{{g.user['username']}}'s sleep record</h1>
 {% endblock %}
 
 {% block content %}
-  <section class="geninfo">
-    <div class="userstreak">Your sleep time today has been:</div>
-</section>
-<section class="streakentry">
-    <button class="tracker" id="trackstart">Start Tracking</button>
-    <button class="tracker" id="trackpause">Pause Tracking</button>
-    <button class="tracker" id="trackreset">Reset Tracking</button>
+<section class="geninfo">
+    <div class="userstreak">Today, you've been asleep for:</div>
     <div id="stopwatch">
         <span class="digit" id="hr">
             00
@@ -30,12 +25,19 @@ Profile
         </span>
         <span class="txt">Sec</span>
     </div>
-
-    <input name="time" id="time" value="{{ request.form['time'] }}">
-
-    <button class="submitter" id="timesubmit">Submit Time</button>
+    <button class="tracker btn btn-dark" id="trackstart">Start Tracking</button>
+    <button class="tracker btn btn-dark" id="trackpause">Pause Tracking</button>
+    <button class="tracker btn btn-dark" id="trackreset">Reset Tracking</button>
+    <form method="post">
+        <input name="time" id="time" value="{{ request.form['stime'] }}">
+        <input type="submit" id="timesubmit" value="Submit Time" class="btn btn-primary">
+    </form>
 </section>
 
-{% import "history.html" as historytemplate %}
+{% for history in history %}
+<section class="history">
+    You slept {{history['stime']}} hours on {{history['created']}}.
+</section>
+{% endfor %}
 
 {% endblock %}
