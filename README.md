@@ -1,6 +1,9 @@
 # hackMIT: nap stars!
 Insomniacs, oversleepers, and tired people alike! Welcome, let us all become nap STARS!
 
+![image](https://github.com/anna-l-zhou/hackmit-teamsleep/assets/118085892/f4ce2f7d-f1a2-4f50-9318-5658bede7aff)
+
+
 Created by: [anna-l-zhou](https://github.com/anna-l-zhou), [dalethmoya](https://github.com/dalethmoya), [masongu2019](https://github.com/masongu2019), [TheA-Way](https://github.com/TheA-Way)
 
 ## Inspiration
